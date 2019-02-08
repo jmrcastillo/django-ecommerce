@@ -80,7 +80,7 @@ class SignupForm(forms.Form):
         email = self.cleaned_data['email']
 
         validate_unique_user(
-                error_message='* Email Already in use',
+            error_message='* Email Already in use',
                 email=email
                 )
         return email
