@@ -1,0 +1,32 @@
+
+
+{% extends "base.html" %}
+
+{% block title %}
+
+{% endblock title %}
+{% load static %}
+
+<!--CSS-->
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/shop.css' %}">
+{% endblock stylesheets %}
+<!--END_css-->
+
+{% block content %}
+        <div class="header">
+            <a class="logo" href="/">My Shop</a>
+        </div>
+        <div class="subheader">
+            <div class="cart">
+                Your Cart is empty
+            </div>
+        </div>
+        <div class="content">
+            {% block shop_content %}
+
+            {% endblock %}
+        </div>
+{% endblock %}

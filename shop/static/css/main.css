@@ -1,0 +1,73 @@
+/*HEADER */
+.header {
+    padding: 10px 100px;
+    margin-top: 60px;
+    font-size: 18px;
+    overflow: auto;
+}
+
+.subheader {
+    background: #ececec;
+    color: #444;
+    padding: 15px 100px;
+    overflow: auto;
+}
+
+.header .logo{
+    font-family: 'Ubuntu', sans-serif;
+    float: left;
+    color: #333;
+    font-size: 21px;
+    margin-right: 10%;
+}
+
+.subheader .cart {
+    float: right;
+    padding-top: 4px;
+}
+
+/*CONTENT */
+.content {
+    padding: 0 100px;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+/*SIDEBAR*/
+.sidebar {
+    width:220px;
+    padding:30px 20px 0 0;
+    float:left;
+}
+
+.sidebar ul{
+    margin:0;
+    padding:0;
+}
+
+.sidebar ul li {
+    margin:0;
+    list-style:none;
+    padding:10px 14px;
+}
+
+.sidebar ul li a {
+    display:block;
+}
+
+.sidebar ul li.selected {
+    background:#5993bb;
+    border-radius:4px;
+}
+
+.sidebar ul li.selected a {
+    color:#fff;
+}
+
+#main {
+    float:left;
+    width: 96%;
+    margin-right:-220px;
+    overflow:hidden;
+}
+
