@@ -1,14 +1,14 @@
 
 
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block 'content' %}
+{% block content %}
 <br>
 <br>
 <br>
 <div class="account-details-container">
     <h1>Signup</h1>
-    <form action="{% url 'signup' %}" method="POST">
+    <form action="{% url 'accounts:signup' %}" method="POST">
         {% csrf_token %}
         {{ form }}
         <button class="btn btn-primary"> Save </button>

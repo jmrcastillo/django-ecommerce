@@ -6,11 +6,6 @@ from .forms import SignupForm
 from django.contrib.auth.models import User
 
 
-def index(request):
-    return render(request, 'user_accounts/create_account_success.html', {})
-    # return render(request, 'main/index.html', {})
-
-
 @csrf_protect
 def signup(request):
 

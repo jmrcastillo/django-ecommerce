@@ -1,7 +1,7 @@
 
 
 {% if user.is_authenticated %}
-<form id="logoutForm" action="{% url 'logout' %}" method="post" class="navbar-right">
+<form id="logoutForm" action="{% url 'accounts:logout' %}" method="post" class="navbar-right">
     {% csrf_token %}
     <ul class="nav navbar-nav navbar-right">
         <li>
@@ -17,7 +17,7 @@
 {% else %}
 
 <ul class="nav navbar-nav navbar-right">
-    <li><a href="{% url 'login' %}"> Log In</a></li>
+    <li><a href="{% url 'accounts:login' %}"> Log In</a></li>
 </ul>
 
 {% endif %}
