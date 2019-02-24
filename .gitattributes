@@ -1,0 +1,4 @@
+accounts cart db.sqlite3 manage.py master media README.md shop static store
+templates
+* linguist-vendored
+*.py linguist-vendored=false
