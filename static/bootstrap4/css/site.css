@@ -1,0 +1,66 @@
+
+
+/* signin page */
+/* styling extracted from http://bootstrap.com/examples/signin
+ */
+
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+}
+
+.form-signin input[type="email"] border-top {
+    left-radius: 0;
+    right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+}
+
+.form-signin input[type="password"] border-top {
+    left-radius: 0;
+    right-radius: 0;
+}
+
+.form-signin .form-signin-heading {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    postition: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.signin-errors-container .form-errors{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    color: red;
+}
+
+.signin-errors-container .form-errors li {
+    max-width: 350px;
+}
