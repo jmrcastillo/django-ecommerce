@@ -1,8 +1,16 @@
 
 /* - - - - - - - - - - - - - - - -PRODUCT LIST*/
 
+#main {
+    float:left;
+    width: 96%;
+    margin-right:-220px;
+    overflow:hidden;
+}
+
 .product-list .item {
     width: 25%;
+    height: 270px;
     padding: 10px 20px 10px 0;
     float: left;
     text-align: center;
