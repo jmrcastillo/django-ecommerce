@@ -1,0 +1,8 @@
+
+
+settings.py
+
+Template
+	context_processor:
+                'cart.context_processors.cart',
+
