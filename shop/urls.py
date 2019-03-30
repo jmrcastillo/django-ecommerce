@@ -11,4 +11,6 @@ urlpatterns = [
              name='product_list_by_category'),
         path('<int:id>/<slug:slug>/', views.product_detail,
              name='product_detail'),
+        path('<int:id>/<slug:slug>/popup', views.product_detail_popup,
+             name='product_detail_popup'),
         ]

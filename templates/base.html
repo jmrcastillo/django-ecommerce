@@ -3,59 +3,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta chartset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{% block title %} My Shop {% endblock title %}</title>
 
         {% load static %}
         {% block stylesheets %}
-            <link rel="stylesheet" type="text/css"  href="{% static 'bootstrap4/css/site.css' %}">
             <link rel="stylesheet" type="text/css"  href="{% static 'bootstrap4/css/bootstrap.min.css' %}">
+            <link rel="stylesheet" type="text/css"  href="{% static 'bootstrap4/css/site.css' %}">
             <link rel="stylesheet" type="text/css"  href="{% static 'style/css/all.min.css' %}">
         {% endblock %}
     </head>
 
     <body>
-        <header class="site-header">
-            <nav class="navbar navbar-dark navbar-expand-md fixed-top"
-                      style="background-color: #5f788a;" >
+        <!--NAVIGATION-->
+        {% include '_navigation.html' %}
+        <!-------->
 
-                <div class="container">
-                    <!--navbar brand-->
-                    <div class="navbar-header">
-                        <a class="navbar-brand mr-4" href="/">JMR App</a>
-                        <button type="button" class="navbar-toggler"
-                            data-toggle="collapse" data-target="#navbarToggle"
-                            aria-expanded="false" aria-controls="navbarToggle">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-
-                    <!--navbar home about-->
-                    <div id="navbarNav" class="collapse navbar-collapse">
-                        <div class="navbar-nav mr-auto">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/">
-                                        <i class="fa fa-home" aria-hidden="true"></i> HOME
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                {% if user.is_authenticated %}
-                                    <a class="nav-link" href="/cart/">
-                                        <i class="fa fa-shopping-cart"
-                                           aria-hidden="true"></i> Cart
-                                    </a>
-                                </li>
-                                {% endif %}
-                            </ul>
-                        </div>
-                    <!--end navbar home-->
-
-                    <!--snippets login signup-->
-                    {% include '_loginpartial.html' %}
-                </div>
-            </div>
-        </nav>
-        </header>
         <div class="container">
             <div class="starter-template">
                 {% if messages %}
@@ -70,7 +34,12 @@
                 {% endblock %}
            </div>
         </div>
-        <script src="{% static 'bootstrap4/js/jquery.min.js' %}"> </script>
+        <!--JAVASCRIPT-->
+        {% block js %}
+            <script src="{% static 'bootstrap4/js/jquery.min.js' %}"> </script>
+            <script src="{% static 'bootstrap4/js/popper.js' %}"> </script>
+            <script src="{% static 'bootstrap4/js/bootstrap.min.js' %}"> </script>
+        {% endblock js %}
     </body>
 </html>
 

@@ -1,6 +1,7 @@
 
 
 {% extends "shop/base.html" %}
+{% load i18n static %}
 
 {% load static %}
 
@@ -25,11 +26,13 @@
         </ul>
     </div>
 
+    <!--PRODUCT LIST-->
     <div id="main" class="product-list">
-        <h1>{% if category %} {{ category.name }} {% else %}Products {% endif %}</h1>
+        <h1>{% if category %} {{ category.name }} {% else %}products {% endif %}</h1>
         {% for product in products %}
         <div class="item">
-            <a href="{{ product.get_absolute_url }}">
+            <a class="product-list" href="{{ product.get_absolute_url }}"
+               data-popup-url="{% url "shop:product_detail_popup" product.id product.slug %}">
                 <img src="{% if product.image %}
                                 {{ product.image.url }}
                           {% else %}
@@ -43,4 +46,59 @@
         </div>
         {% endfor %}
     </div>
+    <!--modal sample-->
+    <button type="button" data-toggle="modal" data-target="#exampleModal"> Launch Modal </button>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>u
+<!--end modal sample-->
 {% endblock %}
+
+{% block extrabody %}
+<div id="popup" class="modal fade" tabindex="-1" role="dialog"
+     aria-hidden="true" aria-labelledby="popup-modal-title">
+    <div class="modal-dialog modal-dialog-centered"
+         role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="popup-modal-title"
+                    class="modal-title"></h4>
+                <button type="button" class="close"
+                        data-dismiss="modal"
+                        aria-label="{% trans 'Close' %}">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'js/product_list.js' %}"></script>
+{% endblock %}
+
