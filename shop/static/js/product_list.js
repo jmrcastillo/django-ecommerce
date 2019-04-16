@@ -12,6 +12,7 @@ jQuery(function($) {
     $list.on("click", ".item a", function(event) {
         var link = this;
         var url = link.getAttribute("data-popup-url");
+        console.log("open modal");
 
         if (url) {
             event.preventDefault();

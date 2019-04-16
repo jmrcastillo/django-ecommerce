@@ -32,12 +32,15 @@
                 {% block content %}
 
                 {% endblock %}
+                {% block extrabody %}
+
+                {% endblock %}
            </div>
         </div>
         <!--JAVASCRIPT-->
         {% block js %}
-            <script src="{% static 'bootstrap4/js/jquery.min.js' %}"> </script>
-            <script src="{% static 'bootstrap4/js/popper.js' %}"> </script>
+            <script src="{% static 'bootstrap4/js/jquery-3.3.1.min.js' %}"> </script>
+            <script src="{% static 'bootstrap4/js/popper.min.js' %}"> </script>
             <script src="{% static 'bootstrap4/js/bootstrap.min.js' %}"> </script>
         {% endblock js %}
     </body>
