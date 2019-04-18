@@ -1,11 +1,13 @@
-{% extends "shop/base.html" %}
+
+
+{% extends "cart/base.html" %}
 {% load static %}
 
 {% block title %}
   Your shopping cart
 {% endblock %}
 
-{% block content %}
+{% block cart_content %}
 <br>
 <br>
 <br>
@@ -26,7 +28,7 @@
         {% with product=item.product %}
           <tr>
             <td>
-              <a href="{{ product.get_absolute_url }}">
+              <a href="">
                 <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
               </a>
             </td>
@@ -58,4 +60,4 @@
       Checkout
     </a>
   </p>
-{% endblock %}
+{% endblock cart_content %}

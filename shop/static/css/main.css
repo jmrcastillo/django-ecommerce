@@ -21,8 +21,8 @@
     margin-right: 10%;
 }
 
-.subheader .cart {
-    float: right;
+.cart {
+    text-align: center;
     padding-top: 4px;
 }
 

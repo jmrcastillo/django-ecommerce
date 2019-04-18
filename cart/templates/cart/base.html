@@ -1,0 +1,17 @@
+
+
+{% extends "base.html" %}
+{% load static %}
+
+<!--CSS-->
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/cart.css' %}">
+{% endblock stylesheets %}
+<!--END_css-->
+
+{% block content %}
+    {% block cart_content %}
+
+    {% endblock cart_content %}
+{% endblock content %}

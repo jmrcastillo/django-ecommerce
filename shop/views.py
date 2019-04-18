@@ -9,11 +9,12 @@ def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
+    template_name = 'shop/product/list.html'
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         products = products.filter(category=category)
     return render(request,
-                  'shop/product/list.html',
+                  template_name,
                   {'category': category,
                    'categories': categories,
                    'products': products})
@@ -32,9 +33,13 @@ def product_detail(request, id, slug):
 
 
 def product_detail_popup(request, id, slug):
+    template_name = 'shop/product/product_detail_popup.html'
     product = get_object_or_404(Product,
                                 id=id,
-                                slug=slug)
+                                slug=slug,
+                                available=True)
+    cart_product_form = CartAddProductForm()
     return render(request,
-                  "shop/product/product_detail_popup.html",
-                  {"product": product})
+                  template_name,
+                  {"product": product,
+                   "cart_product_form": cart_product_form})

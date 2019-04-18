@@ -40,7 +40,8 @@
                           {% endif %}">
             </a>
             <br>
-            <a href="{{ product.get_absolute_url }}" data-popup-url="{% url "shop:product_detail_popup" product.id product.slug %}">{{ product.name }}</a>
+            <a href="{{ product.get_absolute_url }}"
+               data-popup-url="{% url "shop:product_detail_popup" product.id product.slug %}">{{ product.name }}</a>
             <br>
             ${{ product.price }}
         </div>
