@@ -28,7 +28,7 @@ class AuthenticationForm(AuthenticationForm):
 class SignupForm(forms.Form):
     username = forms.CharField(max_length=10, widget=forms.TextInput({
                 'class': 'form-control',
-                'placeholder': 'first name',
+                'placeholder': 'username',
                 })
             )
     first_name = forms.CharField(
@@ -49,7 +49,7 @@ class SignupForm(forms.Form):
             max_length=200,
             widget=forms.TextInput({
                 'class': 'form-control',
-                'placeholder': 'last name'
+                'placeholder': 'email'
                 })
             )
     password = forms.CharField(
