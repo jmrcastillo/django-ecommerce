@@ -1,7 +1,7 @@
 
 
 jQuery(function($) {
-    var $list = $(".product-list");
+    var $list = $(".container");
     var $popup = $("#popup");
 
     $popup.on("click", ".close", function(event) {
@@ -9,7 +9,7 @@ jQuery(function($) {
         // do something when dialog is closed
     });
 
-    $list.on("click", ".item a", function(event) {
+    $list.on("click", ".card a", function(event) {
         var link = this;
         var url = link.getAttribute("data-popup-url");
         console.log("open modal");

@@ -8,20 +8,40 @@
     overflow:hidden;
 }
 
-.product-list .item {
+.container .card {
     width: 25%;
     height: 270px;
-    padding: 10px 20px 10px 0;
     float: left;
+    margin: 6px;
+    padding-top: 9px;
     text-align: center;
     line-height: 1.2;
-    border: 1px solid red;
 }
 
-.product-list .item img {
-    width:100%;
-    margin-bottom:8px;
+.img-container {
+    width: 210px;
+    height: 210px;
+    padding-top: 9px;
+    display: block;
+    margin: auto;
+    position: relative;
 }
+
+.img-card {
+    display: block;
+    margin: auto auto;
+    height: auto;
+    max-height: 150px;
+    width: auto;
+    max-width: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
 
 /*- - - - - - - - - - - - -  - - -  END PRODUCT LIST*/
 
@@ -51,3 +71,52 @@
     margin-top:10px;
 }
 /*- - - - - - - - - - - - END PRODUCT DETAIL*/
+/*CARD*/
+/*-------------------end card---*/
+
+/*modal*/
+
+/*image*/
+.image-div {
+    height: 300px;
+    widows: 300px;
+    margin: 9px;
+    padding: 9px;
+    position: relative;
+}
+
+.img-size {
+    height: auto;
+    max-height: 270px;
+    width: auto;
+    max-width: 270px;
+    /*center image*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    /*---*/
+}
+
+.image-title {
+    height: 210px;
+    text-align: center;
+}
+
+.modal-content {
+   width: 900px;
+   height: 600px;
+}
+
+/*BUTTON*/
+a.button, input[type="submit"] {
+    color:#fff;
+    background:#5993bb;
+    border-radius:3px;
+    padding:10px 20px;
+    font-size:12px;
+    border:0;
+}
+

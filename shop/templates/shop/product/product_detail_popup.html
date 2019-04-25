@@ -1,10 +1,13 @@
 
 {% load static %}
 {% load i18n %}
+<div class="detail_popup">
+    <div class="image-div">
+        <img class="img-size" src="{% if product.image %}{{ product.image.url }} {% else %}
+        {% static "img/no_image.png" %} {% endif %}">
+    </div>
 
-        <img src="{% if product.image %}{{ product.image.url }} {% else %}
-        {% static "img/no_image.png" %}{% endif %}">
-
+    <div class="image-title">
         <h1>{{ product.name }}</h1>
         <h2><a href="{{ product.category.get_absolute_url }}">
         {{ product.category }}</a></h2>
@@ -12,10 +15,9 @@
         <p class="price">${{ product.price }}</p>
 
         <form action="{% url "cart:cart_add" product.id %}" method="POST">
-            {{ cart_product_form }}
             {% csrf_token %}
-            <input type="submit" value="Add to cart"">
+            {{ cart_product_form }}
+            <input type="submit" value="Add to cart">
         </form>
-
-
-        {{ product.description|linebreaks }}
+    </div>
+</div>

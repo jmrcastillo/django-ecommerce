@@ -6,13 +6,6 @@
     overflow: auto;
 }
 
-.subheader {
-    background: #ececec;
-    color: #444;
-    padding: 15px 100px;
-    overflow: auto;
-}
-
 .header .logo{
     font-family: 'Ubuntu', sans-serif;
     float: left;
@@ -21,9 +14,16 @@
     margin-right: 10%;
 }
 
+.subheader {
+    background: #ececec;
+    color: #444;
+    padding: 18px 30px;
+    overflow: auto;
+}
+
+
 .cart {
-    text-align: center;
-    padding-top: 4px;
+    text-align: right;
 }
 
 /*CONTENT */

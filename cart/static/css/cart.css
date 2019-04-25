@@ -19,6 +19,8 @@ a:hover {
     color:#77b6e2;
 }
 
+/*BUTTON*/
+
 a.button, input[type="submit"] {
     color:#fff;
     background:#5993bb;
@@ -28,9 +30,9 @@ a.button, input[type="submit"] {
     border:0;
 }
 
-a.button.light {
+a.button .light {
     color:#666;
-    background:#ededed;
+    background:#efefef;
 }
 
 .text-left {
@@ -72,9 +74,6 @@ table.cart img {
     width:180px;
 }
 
-tbody td.num {
-    text-align:right;
-}
 
 td input[type="submit"] {
     font-size:12px;
@@ -134,8 +133,8 @@ ul.errorlist {
 }
 
 #subheader .cart {
-    float:right;
-    padding-top:4px;
+    float: right;
+    padding-top: 4px;
 }
 
 #content {

@@ -27,25 +27,29 @@
     </div>
 
     <!--PRODUCT LIST-->
-    <div id="main" class="product-list">
-        <h1>{% if category %} {{ category.name }} {% else %}products {% endif %}</h1>
-        {% for product in products %}
-        <div class="item">
-            <a class="product-list" href="{{ product.get_absolute_url }}"
-               data-popup-url="{% url "shop:product_detail_popup" product.id product.slug %}">
-                <img src="{% if product.image %}
-                                {{ product.image.url }}
-                          {% else %}
-                                {% static "img/no_image.png" %}
-                          {% endif %}">
-            </a>
-            <br>
-            <a href="{{ product.get_absolute_url }}"
-               data-popup-url="{% url "shop:product_detail_popup" product.id product.slug %}">{{ product.name }}</a>
-            <br>
-            ${{ product.price }}
-        </div>
-        {% endfor %}
+    <div id="main" class="container">
+            <h1>{% if category %} {{ category.name }} {% else %}Products {% endif %}</h1>
+            {% for product in products %}
+            <!--CARD-->
+                <div class="card" style="width: 15rem;">
+                    <div class="img-container">
+                        <a class="product-list" href="{{ product.get_absolute_url }}"
+                           data-popup-url="{% url "shop:product_detail_popup" product.id product.slug %}">
+                            <img class="img-card" src="{% if product.image %}
+                                            {{ product.image.url }}
+                                      {% else %}
+                                            {% static "img/no_image.png" %}
+                                      {% endif %}">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="{{ product.get_absolute_url }}"
+                           data-popup-url="{% url "shop:product_detail_popup" product.id product.slug %}">{{ product.name }}</a>
+                        <br>
+                        ${{ product.price }}
+                    </div>
+                </div>
+            {% endfor %}
     </div>
 {% endblock %}
 
